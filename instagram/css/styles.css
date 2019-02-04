@@ -1,0 +1,61 @@
+body{
+	margin: 0;
+	font-family: Poppins, sans-serif;
+}
+body::-webkit-scrollbar-track, .item::-webkit-scrollbar-track{
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 5px;
+}
+body::-webkit-scrollbar, .item::-webkit-scrollbar{
+	width: 10px;	
+	height: 10px;
+}
+body::-webkit-scrollbar-thumb, .item::-webkit-scrollbar-thumb{
+	background-color: rgba(0, 0, 0, .3);
+	border-radius: 5px;
+}
+.post-list{
+	display: grid;
+	grid-template-columns: repeat(3, minmax(100px, 293px));
+	justify-content: center;
+	grid-gap: 28px;
+}
+.post{
+	cursor: pointer;
+	position: relative;
+	display: block;
+}
+.post-image{
+	margin: 0;
+}
+.post-image img{
+	width: 100%;
+	vertical-align: top;
+}
+.post-overlay{
+	background-color: rgba(0, 0, 0, .4);
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	text-align: center;
+}
+.post:hover .post-overlay{
+	display: flex;
+}
+.post-likes, .post-comments{
+	width: 80px;
+	margin: 5px;
+	font-weight: bold;
+	display: inline-block;
+}
+@media screen and (max-width: 768px){
+	.post-list{
+		grid-gap: 3px;
+	}
+}
