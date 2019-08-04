@@ -1,3 +1,7 @@
+*{
+	margin: 0;
+	padding: 0;
+}
 body{
 	font-family: Poppins, sans-serif;
 }
@@ -18,8 +22,8 @@ body::-webkit-scrollbar-thumb, .item::-webkit-scrollbar-thumb{
 	display: grid;
 	grid-gap: 5px;  
 	min-height: 100vh;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(4, 1fr);	 
+	grid-template-columns: repeat(3, 200px);
+	grid-template-rows: repeat(4, 100px);	 
 	/*justify-items: start end center stretch;*/
 	/*align-items: start end center stretch;*/
 	justify-items: center;
@@ -28,6 +32,9 @@ body::-webkit-scrollbar-thumb, .item::-webkit-scrollbar-thumb{
 .item{
 	background-color: lightblue;
 	padding: 10px;
+}
+.item div{
+	background-color: #ff0;
 }
 .item:nth-of-type(5){
 	justify-self: start;
